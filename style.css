@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+* { -webkit-font-smoothing: antialiased; }
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+body {
+	background: #fff;
+	overflow-x: hidden;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	line-height: 1;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* --------------------------------------------------------------------------------------------------------- GRID -- */
+
+#logo {
+	position: fixed;
+	left: 50%;
+	top: 70px;
+	z-index: 100;
+	margin-left: -150px;
+}
+
+.column div, span, img {
+	-webkit-transition: all 500ms cubic-bezier(0.1,0.7,0.4,1);
+	   -moz-transition: all 500ms cubic-bezier(0.1,0.7,0.4,1);
+	    -ms-transition: all 500ms cubic-bezier(0.1,0.7,0.4,1);
+	     -o-transition: all 500ms cubic-bezier(0.1,0.7,0.4,1);
+	        transition: all 500ms cubic-bezier(0.1,0.7,0.4,1);
+}
+
+.row { position: relative; width: 100%; margin: auto; *zoom: 1; z-index: 20; height: 100%; position: absolute; }
+.column { display: table; position: relative; width: 100%; float: left; height: 100%; }
+.col-6 { width: 50%; }
+
+
+.column.left {
+	background: #0075E9;
+}
+
+.column.right {
+	background: #EF5A38;
+}
+
+.column div {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+p {
+	max-width: 400px;
+	margin: auto;
+	color: #fff;
+	font-family: Open Sans;
+	font-size: 40px;
+	line-height: 1.1;
+	font-weight: 300;
+}
+
+span {
+	position: absolute;
+	width: 100%;
+	top: 60%;
+	left: 0;
+	display: block;
+	font-size: 130px;
+	text-align: center;
+	font-weight: bold;
+	color: #000;
+	opacity: 0;
+	
+	-webkit-transform: translate3d(0, -250px, 0);
+	   -moz-transform: translate3d(0, -250px, 0);
+	    -ms-transform: translate3d(0, -250px, 0);
+	     -o-transform: translate3d(0, -250px, 0);
+	        transform: translate3d(0, -250px, 0);
+}
+
+.column:hover {
+	cursor: pointer;
+}
+
+.column:hover img {
+	-webkit-transform: scale(0.85);
+	   -moz-transform: scale(0.85);
+        -ms-transform: scale(0.85);
+         -o-transform: scale(0.85);
+	        transform: scale(0.85);
+}
+
+.column:hover div {
+	-webkit-transform: translate3d(0, -50px, 0);
+	   -moz-transform: translate3d(0, -50px, 0);
+	    -ms-transform: translate3d(0, -50px, 0);
+	     -o-transform: translate3d(0, -50px, 0);
+	        transform: translate3d(0, -50px, 0);
+}
+
+.column:hover > span {
+	opacity: 0.07;
+	-webkit-transform: translate3d(0, -200px, 0);
+	   -moz-transform: translate3d(0, -200px, 0);
+	    -ms-transform: translate3d(0, -200px, 0);
+	     -o-transform: translate3d(0, -200px, 0);
+	        transform: translate3d(0, -200px, 0);
+}
+
+.column img {
+	margin-bottom: 50px;
+}
