@@ -127,3 +127,20 @@ span {
 .column img {
 	margin-bottom: 50px;
 }
+.test{
+	 color: black;
+	 background-color: red;
+	 position: fixed;
+	 z-index: 1000;
+	 width: 100px;
+	 height: 100px;
+}
+.test2{
+	color: white;
+	background-color: black;
+	position: fixed;
+	z-index: 1000;
+	width: 100px;
+	height: 100px;
+	left: 100px;
+}
