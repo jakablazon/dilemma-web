@@ -4,17 +4,17 @@
 $limit = 0;
 $id = 0;
 
-$( document ).ready(function (){
+$(document).ready(function () {
     getDbSize();
-    $('.left').click(function(){
+    $('.left').click(function () {
         increase("left");
         loadNew();
     });
-    $('.right').click(function(){
+    $('.right').click(function () {
         increase("right");
         loadNew();
     });
-    $('.test').click(function(){
+    $('.test').click(function () {
         loadNew();
     });
 });
@@ -26,11 +26,13 @@ function increase(side) {
             val: side,
             id: $id
         },
-        function(data, status){
+        function (response) {
+            var obj = JSON.parse(response);
+            console.log(obj);
         });
 }
 
-function getDbSize(){
+function getDbSize() {
     $.ajax({
         type: "GET",
         url: "selector.php",
@@ -39,13 +41,13 @@ function getDbSize(){
         },
         dataType: "html",
         success: function (response) {
-            $limit=response;
+            $limit = response;
             loadNew();
         }
     });
 }
 
-function loadNew(){
+function loadNew() {
     $id = Math.floor(Math.random() * $limit) + 1;
     $.ajax({
         type: "GET",
@@ -54,7 +56,7 @@ function loadNew(){
             "index": $id
         },
         dataType: "html",
-        success: function(response){
+        success: function (response) {
             var obj = JSON.parse(response);
             $("#left-content").html(obj.option1);
             $("#right-content").html(obj.option2);

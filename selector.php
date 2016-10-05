@@ -17,8 +17,10 @@ if ($value == -1) {
     $sql = "SHOW TABLE STATUS";
     $result = mysqli_query($conn, $sql);
     while ($array = mysqli_fetch_array($result)) {
-        $total = $array['Data_length'] + $array['Index_length'];
-        echo $array['Rows'];
+        if ($array['name'] == 'dilemma') {
+            $total = $array['Data_length'] + $array['Index_length'];
+            echo $array['Rows'];
+        }
     }
 } else {
     $sql = "SELECT * FROM dilemma WHERE questionID=$value";
