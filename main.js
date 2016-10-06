@@ -28,7 +28,7 @@ function increase(side) {
         },
         function (response) {
             var obj = JSON.parse(response);
-            console.log(obj);
+            alert(obj.message);
         });
 }
 
