@@ -21,15 +21,20 @@ $(document).ready(function () {
 
 
 function increase(side) {
-    $.post("increment.php",
-        {
-            val: side,
-            id: $id
-        },
-        function (response) {
-            var obj = JSON.parse(response);
-            alert(obj.message);
-        });
+    if (!getCookie('lockVote')) {
+        $.post("increment.php",
+            {
+                val: side,
+                id: $id
+            },
+            function (response) {
+                var obj = JSON.parse(response);
+                setCookie('lockVote', 1);
+                alert(obj.message);
+            });
+    } else {
+        alert('You already voted today!')
+    }
 }
 
 function getDbSize() {
@@ -64,4 +69,15 @@ function loadNew() {
             $("#right-img").attr("src", 'assets/' + obj.image2);
         }
     });
+}
+
+function setCookie(key, value) {
+    var date = new Date();
+    var expirationDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
+    document.cookie = key + '=' + value + ';expires=' + expirationDate;
+}
+
+function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
 }
