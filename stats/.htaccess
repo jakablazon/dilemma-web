@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Password Protected Area"
-AuthUserFile ../Users/jure/web/dilemma-web/stats/.htpasswd
-Require valid-user
