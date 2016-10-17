@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  option1: MyText
+  option2: MyText
+  image1: MyString
+  image2: MyString
+  count1: 1
+  count2: 1
+
+two:
+  option1: MyText
+  option2: MyText
+  image1: MyString
+  image2: MyString
+  count1: 1
+  count2: 1
