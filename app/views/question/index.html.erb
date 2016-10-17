@@ -2,15 +2,15 @@
 <div class="row row-full">
   <div class="column col-6 left">
     <div>
-      <%= image_tag 'handjob.png', width: '180', id: 'left-img' %>
-      <p id="left-content">Gay man giving you a soft and gentle handjob</p>
+      <%= image_tag @question.image1, width: '180', id: 'left-img' %>
+      <p id="left-content"><%= @question.option1 %></p>
     </div>
     <span>Answer<br/>This</span>
   </div>
   <div class="column col-6 right">
     <div>
-      <%= image_tag 'fingering.png', width: '100', id: 'right-img' %>
-      <p id="right-content">Lesbian giving you a hard ass fingering</p>
+      <%= image_tag @question.image2, width: '100', id: 'right-img' %>
+      <p id="right-content"><%= @question.option2 %></p>
     </div>
     <span>Answer<br/>This</span>
   </div>
