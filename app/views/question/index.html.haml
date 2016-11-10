@@ -1,0 +1,16 @@
+%a{:id => 'logo', :href => '/'}= image_tag 'logo-main.png', width: '300'
+.row.row-full
+  .column.col-6.left
+    %div
+      = image_tag @question.image1, width: '180', id: 'left-img'
+      %p#left-content= @question.option1
+    %span
+      Answer
+      %br This
+  .column.col-6.right
+    %div
+      = image_tag @question.image2, width: '100', id: 'right-img'
+      %p#right-content= @question.option2
+    %span
+      Answer
+      %br This
