@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Question.create({option1: 'Gay man giving you a soft and gentle handjob', option2: 'Lesbian giving you a hard ass fingering', image1: 'handjob.png', image2: 'fingering.png', count1: 6, count2: 5})
+Question.create({option1: 'Gay man giving you a soft and gentle handjob.', option2: 'Lesbian giving you a hard ass fingering.', image1: 'handjob.png', image2: 'fingering.png', count1: 6, count2: 5})
