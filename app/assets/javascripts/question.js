@@ -1,9 +1,10 @@
 $(document).ready(function () {
-    $('.left').click(function () {
-        increase($('#qid').val(), "count1");
+    var id = $("qid").val();
+    $('#left').click(function () {
+        increase(id, "count1");
     });
-    $('.right').click(function () {
-        increase($('#qid').val(), "count2");
+    $('#right').click(function () {
+        increase(id, "count2");
     });
 });
 

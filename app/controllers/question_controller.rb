@@ -8,4 +8,8 @@ class QuestionController < ApplicationController
 
     render json: {message: 'Thanks for voting, remember to come back tomorrow to vote again!'}
   end
+
+  def stats
+    @question = Question.first
+  end
 end
