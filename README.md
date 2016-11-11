@@ -2,20 +2,27 @@
 
 Treba je glasvat tastar
 
-* Ruby version
+
+## Documentation
+
+#### Ruby version
 
 2.3.0
 
-* System dependencies
+#### System dependencies
 
-* Configuration
+#### Configuration
 
-`bundle install`
+```
+bundle install
+```
 
-* Database creation
+#### Database creation
 
 Login in terminal:
-`psql -d postgres`
+```
+psql -d postgres
+```
 
 Create db in psql:
 ```
@@ -27,21 +34,22 @@ GRANT ALL PRIVILEGES ON DATABASE dilemma_development, dilemma_test TO dilemma;
 ```
 
 
-* Database initialization
+#### Database initialization
 
 ```
 rake:db migrate
 rake:db seed
 ```
 
-* Start the server
+#### Start the server
 
-`rails s`
+```
+rails s
+```
 
-* How to run the test suite
+#### How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+#### Deployment instructions
 
-* ...
