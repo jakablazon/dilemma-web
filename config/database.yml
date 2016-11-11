@@ -23,7 +23,3 @@ development:
 test:
   <<: *default
   database: dilemma_test
-
-production:
-  <<: *default
-  database: dilemma_production
