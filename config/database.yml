@@ -26,7 +26,4 @@ test:
 
 production:
   <<: *default
-  host: ec2-54-235-221-102.compute-1.amazonaws.com
-  database: d26f2m2415bis3
-  username: bgxmrwtlnyizte
-  password: jATb2W1SSXQBQWSO5mww8jUrkP
+  database: dilemma_production
