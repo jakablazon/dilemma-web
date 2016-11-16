@@ -45,6 +45,8 @@ rake:db seed
 
 ```
 rails s
+
+Jaka: rails s webrick
 ```
 
 #### How to run the test suite
@@ -52,4 +54,3 @@ rails s
 #### Services (job queues, cache servers, search engines, etc.)
 
 #### Deployment instructions
-
