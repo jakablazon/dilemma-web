@@ -1,0 +1,13 @@
+%a{:id => 'logo', :href => '/'}= image_tag 'logo-main.png', width: '300'
+%input{id: 'qid', :type => 'hidden', :value => "#{@question.id}"}
+.row.row-full
+  .column.col-6.left
+    %div
+      %p#left-content= @question.count1
+    %span
+      %p= @question.option1
+  .column.col-6.right
+    %div
+      %p#right-content= @question.count2
+    %span
+      %p= @question.option2
