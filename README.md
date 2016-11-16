@@ -19,26 +19,15 @@ bundle install
 
 #### Database creation
 
-Login in terminal:
 ```
-psql -d postgres
+rake db:create
 ```
-
-Create db in psql:
-```
-create user dilemma password 'dilemma';
-alter user dilemma CREATEDB;
-create database dilemma_development owner dilemma;
-create database dilemma_test owner dilemma;
-GRANT ALL PRIVILEGES ON DATABASE dilemma_development, dilemma_test TO dilemma;
-```
-
 
 #### Database initialization
 
 ```
-rake:db migrate
-rake:db seed
+rake db:migrate
+rake db:seed
 ```
 
 #### Start the server
