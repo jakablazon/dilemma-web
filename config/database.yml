@@ -11,8 +11,8 @@ default: &default
   host: localhost
   port: 5432
   database: dilemma_development
-  username: dilemma
-  password: dilemma
+  # username: dilemma
+  # password: dilemma
 
 development:
   <<: *default
