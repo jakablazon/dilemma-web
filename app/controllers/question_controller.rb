@@ -1,4 +1,6 @@
 class QuestionController < ApplicationController
+  http_basic_authenticate_with name: 'jaka', password: 'najlepsi', only: :stats
+
   def index
     @question = Question.first
   end
